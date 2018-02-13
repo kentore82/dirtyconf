@@ -1,4 +1,7 @@
 #!/bin/bash
+#make sure route is present
+yum install -y net-tools
+
 #Add internet gateway
 route add default gw 10.180.37.169;
 
