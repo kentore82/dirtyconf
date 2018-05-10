@@ -6,5 +6,6 @@ echo "deb http://archive.canonical.com/ubuntu xenial partner" >> /etc/apt/source
 echo "deb-src http://archive.canonical.com/ubuntu xenial partner" >> /etc/apt/sources.list
 apt-get update -y
 DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
+dpkg --configure -a
 apt-get install -y python-minimal
 apt install -y python-setuptools python-pip
