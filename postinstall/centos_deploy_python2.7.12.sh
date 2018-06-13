@@ -21,7 +21,7 @@ rm -rf /tmp/python2.7.12;
 adduser deployer;
 echo -e "changeme123\nchangeme123" | passwd deployer
 usermod -aG wheel deployer
-mkdir /home/deployer/.ssh;
+mkdir -p /home/deployer/.ssh;
 chown deployer:deployer /home/deployer/.ssh;
 cp /root/.ssh/authorized_keys /home/deployer/.ssh/authorized_keys
 chown deployer:deployer /home/deployer/.ssh/authorized_keys
