@@ -22,6 +22,6 @@ adduser deployer;
 echo -e "changeme123\nchangeme123" | passwd deployer
 usermod -aG wheel username
 mkdir /home/deployer/.ssh;
-chown deployer:deployer /home/$USER/.ssh;
+chown deployer:deployer /home/deployer/.ssh;
 cp /root/.ssh/authorized_keys /home/deployer/.ssh/authorized_keys
 chown deployer:deployer /home/deployer/.ssh/authorized_keys
