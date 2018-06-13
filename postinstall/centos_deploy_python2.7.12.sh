@@ -3,7 +3,7 @@
 yum install -y net-tools
 
 #Add internet gateway
-route add default gw 10.180.37.169;
+route add default gw 10.180.37.172;
 
 yum install -y epel-release;
 yum -y update;
