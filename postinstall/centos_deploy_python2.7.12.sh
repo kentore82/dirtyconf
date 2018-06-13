@@ -1,7 +1,12 @@
 #!/bin/bash
 
 # Add internet gateway
-ip route add default via 10.180.37.172;
+yum install -y net-tools
+route add default gw 10.180.37.172
+
+# Set DNS
+echo -e "nameserver 10.180.37.172\noptions single-request-reopen" > /etc/resolv.conf
+
 
 # Add yum epel
 yum install -y epel-release;
